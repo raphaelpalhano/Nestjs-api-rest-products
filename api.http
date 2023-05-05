@@ -1,0 +1,23 @@
+
+
+###
+GET http://localhost:3000/products
+
+
+### 
+GET http://localhost:3000/products/1
+
+### 
+POST http://localhost:3000/products
+Content-Type: "application/json"
+
+{
+ "product_name": "Apple",
+  "product_price": 10.225,
+  "product_quantity": 5,
+  "product_expiration_date": "2023-05-02",
+  "product_category": "foods" 
+}
+
+###
+PATCH http://localhost:3000/products/1

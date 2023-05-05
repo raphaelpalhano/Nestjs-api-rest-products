@@ -1,0 +1,17 @@
+version: '3.0'
+
+services:
+  app:
+    build: .
+    ports:
+      - 3000:3000
+    volumes:
+      - .:/home/node/app
+
+  db-rest:
+   image: mysql:8.0.30-debian
+   environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_DATABASE=db-rest
+   volumes:
+      - .docker/dbdata:/var/lib/mysql
