@@ -10,8 +10,7 @@ services:
 
   db-rest:
    image: mysql:8.0.30-debian
-   environment:
-      - MYSQL_ROOT_PASSWORD=root
-      - MYSQL_DATABASE=db-rest
+   env_file:
+    - .env
    volumes:
       - .docker/dbdata:/var/lib/mysql
