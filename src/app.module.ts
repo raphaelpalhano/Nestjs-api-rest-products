@@ -5,6 +5,5 @@ import { CategoriesModule } from './categories/categories.module';
 
 @Module({
   imports: [ProductsModule, PrismaModule, CategoriesModule],
-  
 })
 export class AppModule {}
